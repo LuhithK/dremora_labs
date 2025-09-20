@@ -1,116 +1,146 @@
 import React from 'react';
-import { Code, Smartphone, Globe, Database, Cloud, Palette, ArrowRight } from 'lucide-react';
 
 const Services = () => {
-  const services = [
-    {
-      icon: <Code className="w-8 h-8 text-white" />,
-      title: "Web Development",
-      description: "Custom web applications built with modern technologies and best practices.",
-      features: ["React/Vue/Angular", "Node.js", "Full-stack Solutions", "API Development"],
-      color: "bg-gradient-to-br from-blue-500 to-blue-600"
-    },
-    {
-      icon: <Smartphone className="w-8 h-8 text-white" />,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile apps for iOS and Android devices.",
-      features: ["iOS Development", "Android Development", "React Native", "Flutter"],
-      color: "bg-gradient-to-br from-purple-500 to-purple-600"
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-white" />,
-      title: "UI/UX Design",
-      description: "Beautiful, intuitive designs that enhance user experience and engagement.",
-      features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
-      color: "bg-gradient-to-br from-green-500 to-green-600"
-    },
-    {
-      icon: <Database className="w-8 h-8 text-white" />,
-      title: "Database Solutions",
-      description: "Scalable database design and optimization for your applications.",
-      features: ["Database Design", "Performance Tuning", "Data Migration", "Analytics"],
-      color: "bg-gradient-to-br from-red-500 to-red-600"
-    },
-    {
-      icon: <Cloud className="w-8 h-8 text-white" />,
-      title: "Cloud Services",
-      description: "Cloud infrastructure setup and management for scalable applications.",
-      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Container Solutions"],
-      color: "bg-gradient-to-br from-indigo-500 to-indigo-600"
-    },
-    {
-      icon: <Palette className="w-8 h-8 text-white" />,
-      title: "Digital Marketing",
-      description: "Comprehensive digital marketing strategies to grow your business online.",
-      features: ["SEO Optimization", "Social Media", "Content Strategy", "Analytics"],
-      color: "bg-gradient-to-br from-pink-500 to-pink-600"
-    }
-  ];
-
   return (
-    <section id="services" className="section-padding bg-white">
+    <section className="section-padding bg-dark-primary">
       <div className="container-custom">
-        {/* Header */}
+        {/* Why Choose Us */}
         <div className="text-center mb-16">
-          <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            Our Services
-          </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-            Comprehensive Digital
-            <span className="text-gradient block">Solutions & Services</span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We offer a full range of digital services to help your business succeed in the modern world. 
-            From web development to digital marketing, we've got you covered.
+          <h2 className="text-4xl font-bold text-white mb-6">Why Choose Us</h2>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Ut tellus lorem quis bibendum sit amet, consectetur.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-custom card-hover overflow-hidden">
-              <div className={`${service.color} p-8 text-center`}>
-                <div className="mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white">{service.title}</h3>
-              </div>
-              
-              <div className="p-8">
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className="flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300 group">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
-              </div>
+        {/* Team Images */}
+        <div className="flex justify-center items-center mb-12">
+          <div className="flex -space-x-4">
+            <img
+              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150"
+              alt="Team Member"
+              className="w-20 h-20 rounded-full border-4 border-orange-500 object-cover"
+            />
+            <img
+              src="https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=150"
+              alt="Team Member"
+              className="w-20 h-20 rounded-full border-4 border-orange-500 object-cover"
+            />
+            <img
+              src="https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&w=150"
+              alt="Team Member"
+              className="w-20 h-20 rounded-full border-4 border-orange-500 object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          {[
+            { number: '12+', label: 'Years of Experience' },
+            { number: '2,554+', label: 'Successful Projects' },
+            { number: '154+', label: 'Professional Team' },
+            { number: '25+', label: 'Awards Won' }
+          ].map((stat, index) => (
+            <div key={index} className="text-center bg-dark-secondary/50 rounded-lg p-6 border border-gray-700">
+              <div className="text-3xl font-bold text-orange-500 mb-2">{stat.number}</div>
+              <div className="text-gray-300 text-sm">{stat.label}</div>
             </div>
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-blue rounded-2xl p-12 text-white text-center">
-          <h3 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h3>
-          <p className="text-xl mb-8 opacity-90">
-            Let's discuss how we can help bring your ideas to life with our expert team.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300">
-              Get Free Quote
-            </button>
-            <button className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300">
-              <span>View Portfolio</span>
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+        {/* Building With the Best Tools */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+          <div className="animate-fadeInLeft">
+            <h2 className="text-4xl font-bold text-white mb-8">
+              Building With<br />
+              the Best Tools
+            </h2>
+            
+            <div className="space-y-4 mb-8">
+              <button className="btn-primary">Web Platform</button>
+              <div className="space-y-2">
+                <div className="text-gray-400">Cloud & DevOps</div>
+                <div className="text-gray-400">Database</div>
+                <div className="text-gray-400">Mobile Apps</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="animate-fadeInRight">
+            <div className="grid grid-cols-2 gap-8">
+              {/* Front End */}
+              <div>
+                <h4 className="text-white font-semibold mb-4">Front End</h4>
+                <div className="space-y-2">
+                  {[
+                    { name: 'Gatsby', number: '05' },
+                    { name: 'React Hook', number: '02' },
+                    { name: 'ANT Design', number: '03' },
+                    { name: 'Material UI', number: '04' }
+                  ].map((tech, index) => (
+                    <div key={index} className="flex items-center justify-between text-gray-300">
+                      <span className="text-sm">{tech.number}</span>
+                      <span>{tech.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Back End */}
+              <div>
+                <h4 className="text-white font-semibold mb-4">Back End</h4>
+                <div className="space-y-2">
+                  {[
+                    { name: 'TypeScript', number: '05' },
+                    { name: 'NEXT.JS', number: '06' },
+                    { name: 'REACT.JS', number: '07' },
+                    { name: 'Rest API', number: '08' }
+                  ].map((tech, index) => (
+                    <div key={index} className="flex items-center justify-between text-gray-300">
+                      <span className="text-sm">{tech.number}</span>
+                      <span>{tech.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Phone Illustration */}
+            <div className="mt-8 flex justify-center">
+              <div className="relative">
+                <div className="w-32 h-64 bg-gradient-orange rounded-3xl p-1">
+                  <div className="w-full h-full bg-dark-primary rounded-3xl flex items-center justify-center">
+                    <div className="text-white text-center">
+                      <div className="text-2xl font-bold">2,554+</div>
+                      <div className="text-xs">Successful Projects</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Our Approach */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="animate-fadeInLeft">
+            <h2 className="text-4xl font-bold text-white mb-6">Our Approach</h2>
+            <p className="text-gray-300 text-lg mb-8">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tellus lorem quis 
+              bibendum sit amet, consectetur adipiscing elit.
+            </p>
+            <button className="btn-primary">Get Started</button>
+          </div>
+
+          <div className="animate-fadeInRight">
+            <div className="relative">
+              <div className="w-32 h-64 bg-gradient-orange rounded-3xl mx-auto"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                <div className="text-white text-2xl font-bold">2,554+</div>
+                <div className="text-white text-xs">Successful Projects</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
