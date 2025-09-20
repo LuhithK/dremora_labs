@@ -1,30 +1,22 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import MaintenanceSection from './components/MaintenanceSection';
-import IndustriesSection from './components/IndustriesSection';
-import WhyChooseUs from './components/WhyChooseUs';
-import BuildingTools from './components/BuildingTools';
-import CaseStudies from './components/CaseStudies';
+import About from './components/About';
 import Services from './components/Services';
+import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
-import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App bg-dark-primary">
+    <div className="App">
       <Header />
       <Hero />
-      <MaintenanceSection />
-      <IndustriesSection />
-      <WhyChooseUs />
-      <BuildingTools />
-      <CaseStudies />
+      <About />
       <Services />
+      <Portfolio />
       <Testimonials />
-      <Team />
       <Contact />
       <Footer />
     </div>

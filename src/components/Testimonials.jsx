@@ -1,68 +1,74 @@
 import React from 'react';
+import { Star, Quote } from 'lucide-react';
 
 const Testimonials = () => {
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      position: 'CEO, TechStart Inc.',
+      image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=300',
+      content: 'Dremora Labs delivered an exceptional web application that exceeded our expectations. Their team is professional, responsive, and truly understands business needs.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      position: 'CTO, InnovateCorp',
+      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300',
+      content: 'The mobile app they developed for us has been a game-changer. The user experience is fantastic, and the performance is outstanding. Highly recommended!',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      position: 'Founder, HealthTech Solutions',
+      image: 'https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&w=300',
+      content: 'Working with Dremora Labs was a pleasure. They provided excellent cloud solutions that improved our scalability and reduced our operational costs significantly.',
+      rating: 5
+    }
+  ];
+
   return (
-    <section className="section-padding bg-dark-primary">
+    <section className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fadeInUp">
-          <h2 className="text-5xl font-black text-white mb-8">What Our Clients Say</h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Ut tellus lorem quis bibendum sit amet, consectetur.
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            Client Testimonials
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            What Our Clients Say
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Don't just take our word for it. Here's what our satisfied clients have to say about our services.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 animate-fadeInUp">
-          {/* Left Testimonial */}
-          <div className="bg-dark-secondary rounded-2xl p-8 border border-gray-700 service-card">
-            <div className="text-center mb-6">
-              <img
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150"
-                alt="Client"
-                className="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-2 border-orange-500"
-              />
-              <div className="text-3xl font-black text-white mb-2">2,554+</div>
-              <div className="text-gray-400 text-sm font-medium">Successful Projects</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl font-bold text-white mb-2">"Professional"</div>
-              <div className="text-gray-400 text-sm">- John Smith</div>
-            </div>
-          </div>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white rounded-xl p-8 shadow-lg card-hover relative">
+              <div className="absolute top-6 right-6 text-blue-100">
+                <Quote className="w-8 h-8" />
+              </div>
+              
+              <div className="flex items-center mb-6">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-16 h-16 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                  <p className="text-gray-600 text-sm">{testimonial.position}</p>
+                </div>
+              </div>
 
-          {/* Center Testimonial - Featured */}
-          <div className="bg-gradient-orange rounded-2xl p-8 transform scale-105 shadow-2xl">
-            <div className="text-center mb-6">
-              <img
-                src="https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=150"
-                alt="Client"
-                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-white"
-              />
-              <div className="text-3xl font-black text-white mb-2">154+</div>
-              <div className="text-white/80 text-sm font-medium">Professional Team</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white mb-2">"Impressive"</div>
-              <div className="text-white/80 text-sm">- Robert James</div>
-            </div>
-          </div>
+              <div className="flex mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
 
-          {/* Right Testimonial */}
-          <div className="bg-dark-secondary rounded-2xl p-8 border border-gray-700 service-card">
-            <div className="text-center mb-6">
-              <img
-                src="https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&w=150"
-                alt="Client"
-                className="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-2 border-orange-500"
-              />
-              <div className="text-3xl font-black text-white mb-2">25+</div>
-              <div className="text-gray-400 text-sm font-medium">Awards Won</div>
+              <p className="text-gray-700 leading-relaxed">"{testimonial.content}"</p>
             </div>
-            <div className="text-center">
-              <div className="text-xl font-bold text-white mb-2">"Good Quality"</div>
-              <div className="text-gray-400 text-sm">- Mike Johnson</div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,89 +1,100 @@
 import React from 'react';
+import { ArrowRight, Play, CheckCircle } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen bg-dark-primary overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-900/5 via-transparent to-red-900/5"></div>
+    <section id="home" className="relative min-h-screen bg-gradient-to-br from-blue-50 to-white overflow-hidden pt-20">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full opacity-50"></div>
+        <div className="absolute top-40 -left-20 w-60 h-60 bg-blue-200 rounded-full opacity-30"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-blue-300 rounded-full opacity-40"></div>
+      </div>
       
-      <div className="container-custom relative z-10 pt-32">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh]">
+      <div className="container-custom relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh] py-20">
           {/* Left Content */}
-          <div className="text-white animate-fadeInLeft">
-            <h1 className="text-7xl lg:text-8xl font-black mb-8 leading-tight">
-              Your <span className="vision-underline">Vision</span>
+          <div className="animate-fadeInLeft">
+            <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <CheckCircle className="w-4 h-4 mr-2" />
+              #1 IT Solutions Company
+            </div>
+            
+            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Innovative
+              <span className="text-blue-600 block">IT Solutions</span>
+              for Your Business
             </h1>
             
-            <div className="mb-8 space-y-2">
-              <p className="text-xl text-gray-300 font-medium">
-                Evaluation & Design
-              </p>
-              <p className="text-lg text-gray-400">
-                Best Practices
-              </p>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+              We provide cutting-edge technology solutions to help your business grow, 
+              scale, and succeed in the digital world. From web development to cloud services.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <button className="btn-primary text-lg px-8 py-4">
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+              <button className="btn-secondary text-lg px-8 py-4">
+                <Play className="mr-2 w-5 h-5" />
+                Watch Demo
+              </button>
             </div>
 
-            <button className="btn-primary mb-12 text-lg px-8 py-4">
-              Get Started
-            </button>
-
-            {/* Stats Card */}
-            <div className="stats-card inline-block animate-slideInUp">
-              <div className="text-5xl font-black text-orange-500 mb-2">12+</div>
-              <div className="text-gray-300 text-sm font-medium">Years of<br />Experience</div>
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                <div className="text-gray-600 text-sm">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
+                <div className="text-gray-600 text-sm">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">5+</div>
+                <div className="text-gray-600 text-sm">Years Experience</div>
+              </div>
             </div>
           </div>
 
-          {/* Right Content - Laptop with Dashboard */}
+          {/* Right Content - Hero Image */}
           <div className="relative animate-fadeInRight">
             <div className="relative">
-              {/* Main laptop image */}
+              {/* Main hero image */}
               <img
-                src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Laptop with dashboard"
+                src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="IT Solutions"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
               
-              {/* Floating info card - top right */}
-              <div className="floating-card top-8 right-8 text-white text-sm max-w-[200px]">
-                <div className="text-orange-500 font-bold mb-1">12+</div>
-                <div className="text-xs text-gray-300">Years of Experience</div>
+              {/* Floating cards */}
+              <div className="absolute -top-6 -left-6 bg-white rounded-xl p-4 shadow-lg animate-float">
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                    <CheckCircle className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">99.9%</div>
+                    <div className="text-sm text-gray-600">Uptime</div>
+                  </div>
+                </div>
               </div>
               
-              {/* Floating description card - top left */}
-              <div className="floating-card delay-1 top-16 -left-8 text-white text-sm max-w-[180px]">
-                <p className="text-xs text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              
-              {/* Floating stats card - bottom right */}
-              <div className="floating-card delay-2 bottom-8 right-4 text-white text-sm">
-                <div className="text-2xl font-bold text-orange-500">12+</div>
-                <div className="text-xs text-gray-300">Years Experience</div>
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-4 shadow-lg animate-float" style={{animationDelay: '1s'}}>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                    <div className="text-blue-600 font-bold">24/7</div>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Support</div>
+                    <div className="text-sm text-gray-600">Available</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Large "Our Code" Background Text */}
-        <div className="mt-20 mb-16 text-center">
-          <h2 className="large-bg-text">
-            Our Code
-          </h2>
-        </div>
-
-        {/* Services Row */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 animate-fadeInUp">
-          {[
-            'Evaluation & Design',
-            'Custom Software',
-            'Web Development',
-            'Mobile Development',
-            'Maintenance & Support'
-          ].map((service, index) => (
-            <div key={index} className="bg-dark-secondary/80 backdrop-blur-custom rounded-xl p-6 border border-gray-700 text-center service-card">
-              <p className="text-sm text-gray-300 font-medium">{service}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
