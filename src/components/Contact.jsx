@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Send } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,7 +25,7 @@ const Contact = () => {
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
-          <div className="animate-fadeInLeft">
+          <div>
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Start<br />
               Your Project?
@@ -86,16 +85,15 @@ const Contact = () => {
                 type="submit"
                 className="btn-primary"
               >
-                <Send className="w-5 h-5 mr-2" />
-                <span>Send Message</span>
+                Send Message
               </button>
             </form>
           </div>
 
           {/* Right Content - 3D Element */}
-          <div className="animate-fadeInRight flex justify-center">
+          <div className="flex justify-center">
             <div className="relative">
-              <div className="text-9xl font-bold text-orange-500 opacity-20">25</div>
+              <div className="text-9xl font-bold text-orange-500/20">25</div>
               <div className="absolute top-0 left-0">
                 <svg width="200" height="200" viewBox="0 0 200 200" className="text-orange-500">
                   <path d="M40 40 Q120 20 180 40 Q200 120 180 180 Q120 200 40 180 Q20 120 40 40 Z" 

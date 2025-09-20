@@ -1,9 +1,13 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
+import MaintenanceSection from './components/MaintenanceSection';
+import IndustriesSection from './components/IndustriesSection';
+import WhyChooseUs from './components/WhyChooseUs';
+import BuildingTools from './components/BuildingTools';
+import CaseStudies from './components/CaseStudies';
 import Services from './components/Services';
-import Portfolio from './components/Portfolio';
+import Testimonials from './components/Testimonials';
 import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -13,9 +17,13 @@ function App() {
     <div className="App bg-dark-primary">
       <Header />
       <Hero />
-      <About />
+      <MaintenanceSection />
+      <IndustriesSection />
+      <WhyChooseUs />
+      <BuildingTools />
+      <CaseStudies />
       <Services />
-      <Portfolio />
+      <Testimonials />
       <Team />
       <Contact />
       <Footer />
