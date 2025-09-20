@@ -23,21 +23,26 @@ const Team = () => {
   return (
     <section className="section-padding bg-dark-primary">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fadeInUp">
           <h2 className="text-4xl font-bold text-white mb-12">Our Teams</h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 animate-fadeInUp">
             {teamMembers.map((member, index) => (
-              <div key={index} className={`text-center ${member.featured ? 'transform scale-105' : ''}`}>
-                <div className={`relative mb-4 ${member.featured ? 'bg-gradient-orange p-1 rounded-2xl' : ''}`}>
+              <div key={index} className={`text-center transition-all duration-300 hover:transform hover:scale-105 ${member.featured ? 'transform scale-105' : ''}`}>
+                <div className={`relative mb-6 ${member.featured ? 'bg-gradient-orange p-1 rounded-2xl shadow-2xl' : 'shadow-xl'}`}>
                   <img
                     src={member.image}
                     alt={member.name}
-                    className={`w-48 h-64 object-cover mx-auto ${member.featured ? 'rounded-2xl' : 'rounded-xl'}`}
+                    className={`w-56 h-72 object-cover mx-auto transition-all duration-300 ${member.featured ? 'rounded-2xl' : 'rounded-xl'}`}
                   />
+                  {member.featured && (
+                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-orange text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                      Featured
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-gray-400">{member.position}</p>
+                <p className="text-orange-400 font-medium">{member.position}</p>
               </div>
             ))}
           </div>

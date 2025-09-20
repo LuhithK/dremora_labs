@@ -25,7 +25,7 @@ const Contact = () => {
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
-          <div>
+          <div className="animate-fadeInLeft">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Start<br />
               Your Project?
@@ -41,7 +41,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Name"
                     required
-                    className="w-full px-4 py-3 bg-dark-secondary border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-6 py-4 bg-dark-secondary border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-300 backdrop-blur-custom"
                   />
                 </div>
                 <div>
@@ -52,7 +52,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Phone"
                     required
-                    className="w-full px-4 py-3 bg-dark-secondary border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-6 py-4 bg-dark-secondary border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-300 backdrop-blur-custom"
                   />
                 </div>
               </div>
@@ -65,7 +65,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Email"
                   required
-                  className="w-full px-4 py-3 bg-dark-secondary border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-6 py-4 bg-dark-secondary border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-300 backdrop-blur-custom"
                 />
               </div>
 
@@ -77,13 +77,13 @@ const Contact = () => {
                   placeholder="Message"
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-dark-secondary border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-6 py-4 bg-dark-secondary border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all duration-300 resize-none backdrop-blur-custom"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="btn-primary"
+                className="btn-primary text-lg px-8 py-4"
               >
                 Send Message
               </button>
@@ -91,19 +91,19 @@ const Contact = () => {
           </div>
 
           {/* Right Content - 3D Element */}
-          <div className="flex justify-center">
+          <div className="flex justify-center animate-fadeInRight">
             <div className="relative">
-              <div className="text-9xl font-bold text-orange-500/20">25</div>
+              <div className="text-[200px] font-bold text-orange-500/10 leading-none select-none">25</div>
               <div className="absolute top-0 left-0">
-                <svg width="200" height="200" viewBox="0 0 200 200" className="text-orange-500">
-                  <path d="M40 40 Q120 20 180 40 Q200 120 180 180 Q120 200 40 180 Q20 120 40 40 Z" 
+                <svg width="300" height="300" viewBox="0 0 300 300" className="text-orange-500 animate-pulse">
+                  <path d="M50 50 Q150 30 250 50 Q270 150 250 250 Q150 270 50 250 Q30 150 50 50 Z" 
                         fill="none" 
                         stroke="currentColor" 
-                        strokeWidth="3" 
-                        className="animate-pulse"/>
-                  <path d="M60 60 Q120 50 160 60 Q170 120 160 160 Q120 170 60 160 Q50 120 60 60 Z" 
+                        strokeWidth="2" 
+                        opacity="0.6"/>
+                  <path d="M70 70 Q150 55 230 70 Q245 150 230 230 Q150 245 70 230 Q55 150 70 70 Z" 
                         fill="currentColor" 
-                        fillOpacity="0.1"/>
+                        opacity="0.3"/>
                 </svg>
               </div>
             </div>

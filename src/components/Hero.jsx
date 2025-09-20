@@ -4,14 +4,17 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen bg-dark-primary overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-900/10 via-transparent to-red-900/5"></div>
       
       <div className="container-custom relative z-10 pt-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Content */}
-          <div className="text-white">
-            <h1 className="text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-              Your <span className="underline decoration-orange-500 decoration-4">Vision</span>
+          <div className="text-white animate-fadeInLeft">
+            <h1 className="text-6xl lg:text-8xl font-bold mb-8 leading-tight text-shadow">
+              Your <span className="relative">
+                Vision
+                <div className="absolute bottom-2 left-0 w-full h-1 bg-gradient-orange rounded"></div>
+              </span>
             </h1>
             
             <div className="mb-8 space-y-2">
@@ -28,24 +31,30 @@ const Hero = () => {
             </button>
 
             {/* Stats Card */}
-            <div className="bg-dark-secondary/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 inline-block">
+            <div className="bg-dark-secondary/80 backdrop-blur-custom rounded-2xl p-6 border border-gray-700 inline-block animate-slideInUp">
               <div className="text-4xl font-bold text-orange-500 mb-2">12+</div>
               <div className="text-gray-300 text-sm">Years of<br />Experience</div>
             </div>
           </div>
 
           {/* Right Content - Laptop Image */}
-          <div className="relative">
+          <div className="relative animate-fadeInRight">
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/205316/pexels-photo-205316.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Laptop with dashboard"
-                className="w-full h-auto rounded-2xl"
+                className="w-full h-auto rounded-2xl shadow-2xl"
               />
               {/* Floating cards */}
-              <div className="absolute top-4 right-4 bg-orange-500 rounded-lg p-3 text-white text-sm animate-float">
+              <div className="absolute top-8 right-8 bg-gradient-orange rounded-lg p-4 text-white text-sm animate-float shadow-lg">
                 Lorem ipsum dolor sit amet,<br />
                 consectetur adipiscing elit.
+              </div>
+              
+              {/* Additional floating element */}
+              <div className="absolute bottom-8 left-8 bg-dark-secondary/90 backdrop-blur-custom rounded-lg p-4 text-white text-sm border border-orange-500/30 animate-float" style={{animationDelay: '1s'}}>
+                <div className="text-2xl font-bold text-orange-500">12+</div>
+                <div className="text-xs text-gray-300">Years Experience</div>
               </div>
             </div>
           </div>
@@ -53,13 +62,13 @@ const Hero = () => {
 
         {/* Large "Our Code" Text */}
         <div className="mt-20 mb-16">
-          <h2 className="text-8xl lg:text-9xl font-bold text-white/10 text-center leading-none">
+          <h2 className="text-8xl lg:text-[12rem] font-bold text-white/5 text-center leading-none select-none">
             Our Code
           </h2>
         </div>
 
         {/* Services Row */}
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 animate-fadeInUp">
           {[
             'Evaluation & Design',
             'Custom Software',
@@ -67,8 +76,8 @@ const Hero = () => {
             'Mobile Development',
             'Maintenance & Support'
           ].map((service, index) => (
-            <div key={index} className="bg-dark-secondary/50 rounded-lg p-4 border border-gray-700 text-center">
-              <p className="text-sm text-gray-300">{service}</p>
+            <div key={index} className="bg-dark-secondary/80 backdrop-blur-custom rounded-xl p-6 border border-gray-700 text-center service-card">
+              <p className="text-sm text-gray-300 font-medium">{service}</p>
             </div>
           ))}
         </div>

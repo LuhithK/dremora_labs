@@ -2,12 +2,12 @@ import React from 'react';
 
 const IndustriesSection = () => {
   const industries = [
-    { name: 'Real Estate', color: 'bg-gradient-to-r from-orange-500 to-red-500' },
-    { name: 'Logistic', color: 'bg-gradient-to-r from-orange-500 to-yellow-500' },
-    { name: 'ECommerce', color: 'bg-gradient-to-r from-red-500 to-orange-500' },
-    { name: 'Government', color: 'bg-gradient-to-r from-orange-400 to-red-400' },
-    { name: 'Healthcare', color: 'bg-gradient-to-r from-orange-500 to-red-600' },
-    { name: 'Oil & Gas', color: 'bg-gradient-to-r from-red-500 to-orange-600' }
+    { name: 'Real Estate', color: 'industry-real-estate' },
+    { name: 'Logistic', color: 'industry-logistic' },
+    { name: 'ECommerce', color: 'industry-ecommerce' },
+    { name: 'Government', color: 'industry-government' },
+    { name: 'Healthcare', color: 'industry-healthcare' },
+    { name: 'Oil & Gas', color: 'industry-oil-gas' }
   ];
 
   return (
@@ -15,7 +15,7 @@ const IndustriesSection = () => {
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
-          <div>
+          <div className="animate-fadeInLeft">
             <h2 className="text-4xl font-bold text-white mb-6">
               Solutions for<br />
               Every Industry
@@ -30,14 +30,14 @@ const IndustriesSection = () => {
           </div>
 
           {/* Right - Industry Cards */}
-          <div className="space-y-4">
+          <div className="space-y-4 animate-fadeInRight">
             {industries.map((industry, index) => (
-              <div key={index} className="flex items-center justify-between bg-dark-secondary rounded-lg p-4 border border-gray-700">
+              <div key={index} className="flex items-center justify-between bg-dark-secondary rounded-xl p-6 border border-gray-700 service-card">
                 <div>
                   <h4 className="text-white font-semibold text-lg">{industry.name}</h4>
                   <p className="text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-                <div className={`w-16 h-12 ${industry.color} rounded-lg`}></div>
+                <div className={`w-20 h-14 ${industry.color} rounded-lg shadow-lg`}></div>
               </div>
             ))}
           </div>
