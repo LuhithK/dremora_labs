@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
 import Services from './components/Services';
-import Portfolio from './components/Portfolio';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
+import Products from './components/Products';
+import Solutions from './components/Solutions';
+import Partners from './components/Partners';
+import Blog from './components/Blog';
 import Footer from './components/Footer';
 
 function App() {
@@ -13,11 +13,11 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
-      <About />
       <Services />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
+      <Products />
+      <Solutions />
+      <Partners />
+      <Blog />
       <Footer />
     </div>
   );
