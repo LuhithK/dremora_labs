@@ -12,30 +12,30 @@ const WhyChooseUs = () => {
     <section className="section-padding bg-dark-primary">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fadeInUp">
-          <h2 className="text-4xl font-bold text-white mb-6">Why Choose Us</h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <h2 className="text-5xl font-black text-white mb-8">Why Choose Us</h2>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Ut tellus lorem quis bibendum sit amet, consectetur.
           </p>
         </div>
 
-        {/* Team Photos */}
-        <div className="flex justify-center mb-12 animate-fadeInUp">
-          <div className="flex -space-x-4">
+        {/* Team Photos - Larger and more prominent */}
+        <div className="flex justify-center mb-16 animate-fadeInUp">
+          <div className="flex -space-x-6">
             <img
-              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150"
+              src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200"
               alt="Team Member"
-              className="w-24 h-24 rounded-full border-4 border-orange-500 object-cover shadow-lg hover:scale-110 transition-transform duration-300"
+              className="w-32 h-32 rounded-full border-4 border-orange-500 object-cover shadow-2xl hover:scale-110 transition-transform duration-300 z-30"
             />
             <img
-              src="https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=150"
+              src="https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=200"
               alt="Team Member"
-              className="w-24 h-24 rounded-full border-4 border-orange-500 object-cover shadow-lg hover:scale-110 transition-transform duration-300"
+              className="w-32 h-32 rounded-full border-4 border-orange-500 object-cover shadow-2xl hover:scale-110 transition-transform duration-300 z-20"
             />
             <img
-              src="https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&w=150"
+              src="https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&w=200"
               alt="Team Member"
-              className="w-24 h-24 rounded-full border-4 border-orange-500 object-cover shadow-lg hover:scale-110 transition-transform duration-300"
+              className="w-32 h-32 rounded-full border-4 border-orange-500 object-cover shadow-2xl hover:scale-110 transition-transform duration-300 z-10"
             />
           </div>
         </div>
@@ -43,9 +43,9 @@ const WhyChooseUs = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 animate-fadeInUp">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center bg-dark-secondary/80 backdrop-blur-custom rounded-xl p-8 border border-gray-700 service-card">
-              <div className="text-3xl font-bold text-orange-500 mb-2">{stat.number}</div>
-              <div className="text-gray-300 text-sm">{stat.label}</div>
+            <div key={index} className="text-center stats-card service-card">
+              <div className="text-4xl font-black text-orange-500 mb-3">{stat.number}</div>
+              <div className="text-gray-300 text-sm font-medium">{stat.label}</div>
             </div>
           ))}
         </div>

@@ -24,25 +24,35 @@ const Team = () => {
     <section className="section-padding bg-dark-primary">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fadeInUp">
-          <h2 className="text-4xl font-bold text-white mb-12">Our Teams</h2>
+          <h2 className="text-5xl font-black text-white mb-12">Our Teams</h2>
           
-          <div className="grid md:grid-cols-3 gap-8 animate-fadeInUp">
+          <div className="grid md:grid-cols-3 gap-12 animate-fadeInUp">
             {teamMembers.map((member, index) => (
-              <div key={index} className={`text-center transition-all duration-300 hover:transform hover:scale-105 ${member.featured ? 'transform scale-105' : ''}`}>
-                <div className={`relative mb-6 ${member.featured ? 'bg-gradient-orange p-1 rounded-2xl shadow-2xl' : 'shadow-xl'}`}>
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className={`w-56 h-72 object-cover mx-auto transition-all duration-300 ${member.featured ? 'rounded-2xl' : 'rounded-xl'}`}
-                  />
+              <div key={index} className={`text-center transition-all duration-300 hover:transform hover:scale-105 ${member.featured ? 'transform scale-110' : ''}`}>
+                <div className={`relative mb-8 ${member.featured ? 'team-featured shadow-2xl' : 'shadow-xl'}`}>
+                  {member.featured ? (
+                    <div className="team-content">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-64 h-80 object-cover mx-auto rounded-2xl"
+                      />
+                    </div>
+                  ) : (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-56 h-72 object-cover mx-auto rounded-2xl transition-all duration-300"
+                    />
+                  )}
                   {member.featured && (
-                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-orange text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                    <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-gradient-orange text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg">
                       Featured
                     </div>
                   )}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-orange-400 font-medium">{member.position}</p>
+                <h3 className="text-2xl font-black text-white mb-3">{member.name}</h3>
+                <p className="text-orange-400 font-bold text-lg">{member.position}</p>
               </div>
             ))}
           </div>
