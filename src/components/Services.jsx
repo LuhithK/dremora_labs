@@ -1,63 +1,49 @@
 import React from 'react';
-import { Code, Smartphone, Globe, Database, Cloud, Palette, Shield, Headphones, ArrowRight } from 'lucide-react';
+import { Code, Smartphone, Globe, Database, Cloud, Palette, ArrowRight } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: <Code className="w-12 h-12 text-white" />,
-      title: "Custom Software Development",
-      description: "Tailored software solutions built to meet your specific business requirements and goals with cutting-edge technologies.",
-      features: ["Full-stack Development", "API Integration", "Database Design", "Performance Optimization"],
-      color: "from-blue-500 to-blue-600"
-    },
-    {
-      icon: <Smartphone className="w-12 h-12 text-white" />,
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android devices with exceptional user experiences.",
-      features: ["iOS Development", "Android Development", "React Native", "Flutter"],
-      color: "from-purple-500 to-purple-600"
-    },
-    {
-      icon: <Globe className="w-12 h-12 text-white" />,
+      icon: <Code className="w-8 h-8 text-white" />,
       title: "Web Development",
-      description: "Modern, responsive websites and web applications using the latest technologies and best practices.",
-      features: ["React/Vue/Angular", "Node.js", "Progressive Web Apps", "E-commerce Solutions"],
-      color: "from-green-500 to-green-600"
+      description: "Custom web applications built with modern technologies and best practices.",
+      features: ["React/Vue/Angular", "Node.js", "Full-stack Solutions", "API Development"],
+      color: "bg-gradient-to-br from-blue-500 to-blue-600"
     },
     {
-      icon: <Cloud className="w-12 h-12 text-white" />,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services for modern businesses seeking digital transformation.",
-      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Container Orchestration"],
-      color: "from-indigo-500 to-indigo-600"
+      icon: <Smartphone className="w-8 h-8 text-white" />,
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile apps for iOS and Android devices.",
+      features: ["iOS Development", "Android Development", "React Native", "Flutter"],
+      color: "bg-gradient-to-br from-purple-500 to-purple-600"
     },
     {
-      icon: <Database className="w-12 h-12 text-white" />,
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights with advanced analytics solutions and machine learning.",
-      features: ["Business Intelligence", "Machine Learning", "Data Visualization", "Predictive Analytics"],
-      color: "from-pink-500 to-pink-600"
-    },
-    {
-      icon: <Palette className="w-12 h-12 text-white" />,
+      icon: <Globe className="w-8 h-8 text-white" />,
       title: "UI/UX Design",
-      description: "Beautiful, intuitive designs that enhance user experience and engagement across all platforms.",
+      description: "Beautiful, intuitive designs that enhance user experience and engagement.",
       features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
-      color: "from-orange-500 to-orange-600"
+      color: "bg-gradient-to-br from-green-500 to-green-600"
     },
     {
-      icon: <Shield className="w-12 h-12 text-white" />,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and ensure data privacy compliance.",
-      features: ["Security Audits", "Penetration Testing", "Compliance", "Risk Assessment"],
-      color: "from-red-500 to-red-600"
+      icon: <Database className="w-8 h-8 text-white" />,
+      title: "Database Solutions",
+      description: "Scalable database design and optimization for your applications.",
+      features: ["Database Design", "Performance Tuning", "Data Migration", "Analytics"],
+      color: "bg-gradient-to-br from-red-500 to-red-600"
     },
     {
-      icon: <Headphones className="w-12 h-12 text-white" />,
-      title: "Technical Support",
-      description: "24/7 technical support and maintenance services for all your software needs and ongoing projects.",
-      features: ["24/7 Support", "Bug Fixes", "Performance Monitoring", "Regular Updates"],
-      color: "from-teal-500 to-teal-600"
+      icon: <Cloud className="w-8 h-8 text-white" />,
+      title: "Cloud Services",
+      description: "Cloud infrastructure setup and management for scalable applications.",
+      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Container Solutions"],
+      color: "bg-gradient-to-br from-indigo-500 to-indigo-600"
+    },
+    {
+      icon: <Palette className="w-8 h-8 text-white" />,
+      title: "Digital Marketing",
+      description: "Comprehensive digital marketing strategies to grow your business online.",
+      features: ["SEO Optimization", "Social Media", "Content Strategy", "Analytics"],
+      color: "bg-gradient-to-br from-pink-500 to-pink-600"
     }
   ];
 
@@ -65,45 +51,44 @@ const Services = () => {
     <section id="services" className="section-padding bg-white">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-20">
-          <span className="inline-block bg-indigo-100 text-indigo-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        <div className="text-center mb-16">
+          <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">
             Our Services
-          </span>
-          <h2 className="heading-lg text-gray-800 mb-6">
-            Comprehensive Software
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            Comprehensive Digital
             <span className="text-gradient block">Solutions & Services</span>
           </h2>
-          <p className="text-body max-w-4xl mx-auto">
-            From concept to deployment, we offer end-to-end software development services 
-            that help businesses thrive in the digital age. Our expert team delivers solutions 
-            that drive growth and innovation.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            We offer a full range of digital services to help your business succeed in the modern world. 
+            From web development to digital marketing, we've got you covered.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <div key={index} className="group bg-white rounded-2xl shadow-custom card-hover overflow-hidden">
-              <div className={`bg-gradient-to-br ${service.color} p-8 text-center`}>
+            <div key={index} className="bg-white rounded-2xl shadow-custom card-hover overflow-hidden">
+              <div className={`${service.color} p-8 text-center`}>
                 <div className="mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                <h3 className="text-xl font-bold text-white">{service.title}</h3>
               </div>
               
               <div className="p-8">
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                <p className="text-gray-600 mb-6">{service.description}</p>
                 
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <div className="w-2 h-2 bg-indigo-600 rounded-full mr-3 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
                 
-                <button className="flex items-center text-indigo-600 font-semibold hover:text-indigo-700 transition-colors duration-300 group">
+                <button className="flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300 group">
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
@@ -113,22 +98,19 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-primary rounded-3xl p-12 lg:p-16 text-white text-center shadow-custom-lg">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="heading-md mb-6">Ready to Transform Your Business?</h3>
-            <p className="text-xl mb-10 opacity-90 leading-relaxed">
-              Let's discuss how we can help transform your ideas into reality with our 
-              comprehensive software development services and expert team.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="btn-outline">
-                Get Free Consultation
-              </button>
-              <button className="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
-                <span>View Our Portfolio</span>
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-            </div>
+        <div className="bg-gradient-blue rounded-2xl p-12 text-white text-center">
+          <h3 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h3>
+          <p className="text-xl mb-8 opacity-90">
+            Let's discuss how we can help bring your ideas to life with our expert team.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300">
+              Get Free Quote
+            </button>
+            <button className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300">
+              <span>View Portfolio</span>
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
           </div>
         </div>
       </div>

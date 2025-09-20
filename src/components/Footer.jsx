@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github, ArrowUp, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -11,104 +11,80 @@ const Footer = () => {
       { name: 'About Us', href: '#about' },
       { name: 'Our Team', href: '#team' },
       { name: 'Careers', href: '#' },
-      { name: 'News & Blog', href: '#' },
-      { name: 'Case Studies', href: '#' }
+      { name: 'Blog', href: '#' }
     ],
     services: [
       { name: 'Web Development', href: '#services' },
       { name: 'Mobile Apps', href: '#services' },
-      { name: 'Cloud Solutions', href: '#services' },
       { name: 'UI/UX Design', href: '#services' },
-      { name: 'Consulting', href: '#services' }
+      { name: 'Cloud Solutions', href: '#services' }
     ],
     resources: [
       { name: 'Documentation', href: '#' },
-      { name: 'API Reference', href: '#' },
-      { name: 'Support Center', href: '#' },
-      { name: 'Community', href: '#' },
-      { name: 'Downloads', href: '#' }
-    ],
-    legal: [
+      { name: 'Support', href: '#' },
       { name: 'Privacy Policy', href: '#' },
-      { name: 'Terms of Service', href: '#' },
-      { name: 'Cookie Policy', href: '#' },
-      { name: 'GDPR Compliance', href: '#' }
+      { name: 'Terms of Service', href: '#' }
     ]
   };
 
   const socialLinks = [
-    { icon: <Facebook className="w-6 h-6" />, href: '#', name: 'Facebook', color: 'hover:bg-blue-600' },
-    { icon: <Twitter className="w-6 h-6" />, href: '#', name: 'Twitter', color: 'hover:bg-blue-400' },
-    { icon: <Linkedin className="w-6 h-6" />, href: '#', name: 'LinkedIn', color: 'hover:bg-blue-700' },
-    { icon: <Instagram className="w-6 h-6" />, href: '#', name: 'Instagram', color: 'hover:bg-pink-600' },
-    { icon: <Github className="w-6 h-6" />, href: '#', name: 'GitHub', color: 'hover:bg-gray-800' }
+    { icon: <Facebook className="w-5 h-5" />, href: '#', name: 'Facebook' },
+    { icon: <Twitter className="w-5 h-5" />, href: '#', name: 'Twitter' },
+    { icon: <Linkedin className="w-5 h-5" />, href: '#', name: 'LinkedIn' },
+    { icon: <Instagram className="w-5 h-5" />, href: '#', name: 'Instagram' },
+    { icon: <Github className="w-5 h-5" />, href: '#', name: 'GitHub' }
   ];
 
   return (
-    <footer className="bg-gray-900 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern"></div>
-      </div>
-
+    <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
-      <div className="container-custom py-20 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12">
+      <div className="container-custom py-16">
+        <div className="grid lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-4">
-            <div className="flex items-center space-x-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">D</span>
-              </div>
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-3 mb-6">
+              <svg width="32" height="32" viewBox="0 0 40 40">
+                <defs>
+                  <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#60A5FA" />
+                    <stop offset="50%" stopColor="#3B82F6" />
+                    <stop offset="100%" stopColor="#1D4ED8" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 8 L20 8 L32 20 L20 32 L8 20 Z" fill="url(#footerLogoGradient)" />
+                <path d="M12 12 L16 12 L28 24 L16 28 L12 24 Z" fill="#60A5FA" />
+              </svg>
               <div>
-                <h3 className="text-2xl font-bold">Dremora Labs</h3>
-                <p className="text-gray-400 text-sm">Software Solutions</p>
+                <h3 className="text-xl font-bold">Dremora Labs</h3>
               </div>
             </div>
             
-            <p className="text-gray-300 mb-8 leading-relaxed text-lg">
-              We're a leading software development company dedicated to creating 
-              innovative solutions that transform businesses and enhance user experiences 
-              across the globe.
+            <p className="text-gray-300 mb-6">
+              We create innovative digital solutions that help businesses thrive in the modern world.
             </p>
             
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-blue-400" />
-                </div>
-                <div>
-                  <p className="text-gray-400 text-sm">Email Us</p>
-                  <p className="text-white font-medium">hello@dremoralabs.com</p>
-                </div>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-4 h-4 text-blue-400" />
+                <span className="text-gray-300">hello@dremoralabs.com</span>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-green-400" />
-                </div>
-                <div>
-                  <p className="text-gray-400 text-sm">Call Us</p>
-                  <p className="text-white font-medium">+1 (555) 123-4567</p>
-                </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-green-400" />
+                <span className="text-gray-300">+1 (555) 123-4567</span>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-purple-400" />
-                </div>
-                <div>
-                  <p className="text-gray-400 text-sm">Visit Us</p>
-                  <p className="text-white font-medium">123 Innovation Drive, Tech City</p>
-                </div>
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-4 h-4 text-purple-400" />
+                <span className="text-gray-300">123 Innovation Drive, Tech City</span>
               </div>
             </div>
             
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-3">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
-                  className={`w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white ${social.color} transition-all duration-300 transform hover:scale-110`}
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -118,20 +94,18 @@ const Footer = () => {
           </div>
 
           {/* Links Sections */}
-          <div className="lg:col-span-8 grid md:grid-cols-4 gap-8">
+          <div className="lg:col-span-3 grid md:grid-cols-3 gap-8">
             {/* Company Links */}
             <div>
-              <h4 className="text-lg font-bold mb-6 text-white">Company</h4>
-              <ul className="space-y-4">
+              <h4 className="text-lg font-bold mb-4">Company</h4>
+              <ul className="space-y-2">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                      className="text-gray-400 hover:text-white transition-colors duration-300"
                     >
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">
-                        {link.name}
-                      </span>
+                      {link.name}
                     </a>
                   </li>
                 ))}
@@ -140,17 +114,15 @@ const Footer = () => {
 
             {/* Services Links */}
             <div>
-              <h4 className="text-lg font-bold mb-6 text-white">Services</h4>
-              <ul className="space-y-4">
+              <h4 className="text-lg font-bold mb-4">Services</h4>
+              <ul className="space-y-2">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                      className="text-gray-400 hover:text-white transition-colors duration-300"
                     >
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">
-                        {link.name}
-                      </span>
+                      {link.name}
                     </a>
                   </li>
                 ))}
@@ -159,84 +131,33 @@ const Footer = () => {
 
             {/* Resources Links */}
             <div>
-              <h4 className="text-lg font-bold mb-6 text-white">Resources</h4>
-              <ul className="space-y-4">
+              <h4 className="text-lg font-bold mb-4">Resources</h4>
+              <ul className="space-y-2">
                 {footerLinks.resources.map((link, index) => (
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
+                      className="text-gray-400 hover:text-white transition-colors duration-300"
                     >
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">
-                        {link.name}
-                      </span>
+                      {link.name}
                     </a>
                   </li>
                 ))}
               </ul>
-            </div>
-
-            {/* Legal Links */}
-            <div>
-              <h4 className="text-lg font-bold mb-6 text-white">Legal</h4>
-              <ul className="space-y-4">
-                {footerLinks.legal.map((link, index) => (
-                  <li key={index}>
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group"
-                    >
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">
-                        {link.name}
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-16 pt-12">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h4 className="text-2xl font-bold mb-4">Stay Updated with Our Newsletter</h4>
-              <p className="text-gray-300 text-lg">
-                Subscribe to receive the latest updates, insights, and exclusive content 
-                from our team of experts.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-grow px-6 py-4 bg-gray-800 border-2 border-gray-700 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-white placeholder-gray-400 text-lg"
-              />
-              <button className="btn-primary whitespace-nowrap">
-                <Send className="w-5 h-5 mr-2" />
-                Subscribe
-              </button>
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800 bg-gray-950">
-        <div className="container-custom py-8">
+      <div className="border-t border-gray-800">
+        <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 mb-4 md:mb-0 text-center md:text-left">
+            <div className="text-gray-400 mb-4 md:mb-0">
               <p>© 2024 Dremora Labs. All rights reserved.</p>
-              <p className="text-sm mt-1">Crafted with ❤️ by our amazing team</p>
             </div>
-            
-            <div className="flex items-center space-x-6">
-              <span className="text-gray-500 text-sm">Trusted by 500+ clients worldwide</span>
-              <div className="flex space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-green-400 text-sm font-medium">All systems operational</span>
-              </div>
+            <div className="text-gray-400">
+              <p>Made with ❤️ by Dremora Labs Team</p>
             </div>
           </div>
         </div>
@@ -245,10 +166,10 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-primary rounded-full flex items-center justify-center text-white hover:shadow-2xl transition-all duration-300 transform hover:scale-110 z-50"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-all duration-300 transform hover:scale-110 z-50 shadow-lg"
         aria-label="Scroll to top"
       >
-        <ArrowUp className="w-6 h-6" />
+        <ArrowUp className="w-5 h-5" />
       </button>
     </footer>
   );
