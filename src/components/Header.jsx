@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,18 +43,17 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-red-600 transition-colors duration-300 font-medium"
+                className="text-gray-300 hover:text-red-600 transition-colors duration-300 font-medium text-sm"
               >
                 {item.name}
               </a>
             ))}
             
             {/* Dark Mode Toggle */}
-            <div className="flex items-center">
-              <div className="w-12 h-6 bg-gray-700 rounded-full relative cursor-pointer">
-                <div className="w-5 h-5 bg-red-600 rounded-full absolute top-0.5 right-0.5 transition-all duration-300"></div>
-              </div>
-            </div>
+            <div 
+              className={`dark-mode-toggle ${isDarkMode ? 'active' : ''}`}
+              onClick={() => setIsDarkMode(!isDarkMode)}
+            ></div>
           </nav>
 
           {/* Mobile Menu Button */}
