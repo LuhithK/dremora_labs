@@ -14,12 +14,12 @@ const Header = () => {
   }, []);
 
   const navItems = [
+    { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Industries', href: '/industries' },
     { name: 'Portfolio', href: '/portfolio' },
     { name: 'About Us', href: '/about' },
-    { name: 'Blog', href: '#blog' },
     { name: 'Careers', href: '/careers' },
   ];
 
@@ -34,13 +34,24 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center group">
-              <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl mr-3 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <span className="text-white font-bold text-lg">D</span>
+              <div className="relative mr-3">
+                <div className="w-8 h-8 bg-white rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 overflow-hidden border border-gray-200">
+                  <img 
+                    src="/assets/logo.png" 
+                    alt="Dremora Labs Logo"
+                    className="w-full h-full object-contain p-1"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center" style={{display: 'none'}}>
+                    <span className="text-white font-bold text-sm">D</span>
+                  </div>
                 </div>
-                <div className="absolute inset-0 w-10 h-10 bg-gradient-to-r from-blue-400 to-blue-500 rounded-xl mr-3 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 w-8 h-8 bg-gradient-to-r from-blue-400 to-blue-500 rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
               </div>
-              <div className="text-2xl font-bold">
+              <div className="text-xl font-bold">
                 <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                   Dremora Labs
                 </span>
