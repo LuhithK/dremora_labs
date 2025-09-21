@@ -483,6 +483,18 @@ a:focus {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
+/* Floating Style for Logo */
+.floating-style {
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.floating-style:hover {
+  box-shadow: 0 12px 40px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
 /* Testimonial Cards */
 .testimonial-card {
   background: white;
