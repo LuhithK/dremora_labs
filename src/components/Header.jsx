@@ -16,12 +16,12 @@ const Header = () => {
 
   const navItems = [
     { name: 'Services', href: '#services' },
-    { name: 'Solutions', href: '#solutions' },
-    { name: 'Industries', href: '#industries' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'About Us', href: '#about' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Industries', href: '/industries' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'About Us', href: '/about' },
     { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Careers', href: '/careers' },
   ];
 
   return (
@@ -33,11 +33,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center">
-              <img 
-                src="/assets/logo copy.png" 
-                alt="Dremora Labs" 
-                className="h-8 w-auto mr-3"
-              />
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded mr-3 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">D</span>
+              </div>
               <div className="text-2xl font-bold text-white">
                 <span className="text-blue-500">Dremora Labs</span>
               </div>
