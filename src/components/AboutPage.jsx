@@ -86,7 +86,7 @@ const AboutPage = () => {
               </h2>
               
               <p className="text-gray-400 mb-8 text-lg leading-relaxed">
-                Dremora is a global IT & Consulting company providing solution-oriented approach and 
+                Dremora Labs is a global IT & Consulting company providing solution-oriented approach and 
                 custom software development to its clients across multiple business domains.
               </p>
 
@@ -103,9 +103,9 @@ const AboutPage = () => {
             {/* Right Content - Video/Image */}
             <div className="animate-fadeInRight">
               <div className="relative">
-                <div className="bg-gradient-to-br from-red-600 to-red-800 p-8 rounded-2xl">
+                <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-8 rounded-2xl">
                   <div className="bg-black rounded-xl p-8 flex items-center justify-center h-64">
-                    <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center">
+                    <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center">
                       <div className="w-0 h-0 border-l-[12px] border-l-white border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
                     </div>
                   </div>
@@ -118,7 +118,7 @@ const AboutPage = () => {
           <div className="grid md:grid-cols-3 gap-8 animate-fadeInUp">
             {services.map((service, index) => (
               <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <service.icon className="w-10 h-10 text-white" />
                 </div>
                 
@@ -126,6 +126,7 @@ const AboutPage = () => {
                 <div className="text-6xl font-bold text-gray-800 mb-4">{service.number}</div>
                 
                 <button className="text-red-600 font-semibold hover:text-red-500 transition-colors text-sm tracking-wider uppercase">
+                <button className="text-blue-600 font-semibold hover:text-blue-500 transition-colors text-sm tracking-wider uppercase">
                   {service.description} →
                 </button>
               </div>

@@ -98,15 +98,15 @@ const CareersPage = () => {
             {/* Left Content */}
             <div className="animate-fadeInLeft">
               <h2 className="text-5xl font-bold text-white mb-8 leading-tight">
-                Dremora Careers: Empowering Talent, Inspiring Impact
+                Dremora Labs Careers: Empowering Talent, Inspiring Impact
               </h2>
               
               <p className="text-gray-400 mb-8 text-lg leading-relaxed">
                 Our culture is powered by one simple value: treat people the way you want to be treated. This means we treat everyone with 
-                fairness, openness, honesty, and respect from the moment you apply for a role at Dremora.
+                fairness, openness, honesty, and respect from the moment you apply for a role at Dremora Labs.
               </p>
 
-              <button className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 View Open Positions
               </button>
             </div>
@@ -130,7 +130,7 @@ const CareersPage = () => {
                 Interview Process - What to Expect
               </h2>
               <p className="text-gray-400 text-lg max-w-4xl mx-auto">
-                The interview process at Dremora involves several conversations to discuss your qualifications, skills, and motivations. It's an opportunity for us to ensure you're a great fit for our company culture, and just as importantly, it allows you to evaluate if Dremora aligns with your career aspirations.
+                The interview process at Dremora Labs involves several conversations to discuss your qualifications, skills, and motivations. It's an opportunity for us to ensure you're a great fit for our company culture, and just as importantly, it allows you to evaluate if Dremora Labs aligns with your career aspirations.
               </p>
             </div>
 
@@ -166,6 +166,7 @@ const CareersPage = () => {
                     </span>
                   </div>
                   <button className="text-red-600 font-semibold hover:text-red-700 transition-colors">
+                  <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
                     {position.link}
                   </button>
                 </div>
@@ -229,36 +230,6 @@ const CareersPage = () => {
 
             {/* Contact Us */}
             <div>
-              <div className="bg-blue-600 text-white p-6 rounded-lg mb-8">
-                <h4 className="font-semibold mb-3 text-lg">Contact Us</h4>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center">
-                    <span className="mr-3">📞</span>
-                    <span>(+94) 112 593 623</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="mr-3">✉️</span>
-                    <span>info@dremoralabs.com</span>
-                  </div>
-                  <div className="flex items-start">
-                    <span className="mr-3 mt-1">📍</span>
-                    <span>No 5 Sulaiman Terrace, Colombo 05, Sri Lanka</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Certification Badges */}
-              <div className="flex space-x-2">
-                <div className="bg-red-600 text-white p-2 rounded text-xs font-bold text-center">
-                  ISO 9001:2015<br />
-                  BUREAU VERITAS<br />
-                  Certification
-                </div>
-                <div className="bg-white text-black p-2 rounded text-xs font-bold text-center">
-                  SLASSCOM<br />
-                  MEMBER
-                </div>
-              </div>
             </div>
           </div>
         </div>

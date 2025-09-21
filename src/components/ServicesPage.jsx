@@ -88,8 +88,9 @@ const ServicesPage = () => {
         {/* Floating Social Icons */}
         <div className="floating-social">
           <div className="social-icon">f</div>
+          <div className="social-icon">📷</div>
           <div className="social-icon">in</div>
-          <div className="social-icon">@</div>
+          <div className="social-icon">📺</div>
         </div>
       </section>
 

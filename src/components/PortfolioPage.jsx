@@ -61,11 +61,12 @@ const PortfolioPage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] bg-black overflow-hidden pt-20">
         <div className="absolute inset-0">
-          <div className="w-full h-full bg-gradient-to-br from-red-900/20 to-black flex items-center justify-center">
-            <div className="w-64 h-64 rounded-full border-4 border-red-500 flex items-center justify-center">
-              <div className="w-32 h-32 rounded-full bg-red-500/30"></div>
-            </div>
-          </div>
+          <img 
+            src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+            alt="Portfolio Background"
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         </div>
         
         <div className="container-custom relative z-10">
