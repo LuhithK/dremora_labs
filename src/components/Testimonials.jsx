@@ -30,16 +30,16 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-black">
       <div className="container-custom">
         <div className="text-center mb-20 animate-fadeInUp">
           <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
             Client Testimonials
           </div>
-          <h2 className="heading-secondary mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             What Our Clients Say
           </h2>
-          <p className="text-lead max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what our satisfied clients have to say 
             about our services and the results we've delivered.
           </p>
@@ -47,7 +47,7 @@ const Testimonials = () => {
 
         <div className="grid md:grid-cols-3 gap-8 animate-fadeInUp">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-card">
+            <div key={index} className="bg-gray-900 rounded-xl p-8 card-hover">
               <div className="flex items-center mb-6">
                 <img
                   src={testimonial.image}
@@ -55,8 +55,8 @@ const Testimonials = () => {
                   className="w-16 h-16 rounded-full object-cover mr-4"
                 />
                 <div>
-                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-gray-600 text-sm">{testimonial.position}</p>
+                  <h4 className="font-semibold text-white">{testimonial.name}</h4>
+                  <p className="text-gray-400 text-sm">{testimonial.position}</p>
                   <p className="text-blue-600 text-sm font-medium">{testimonial.company}</p>
                 </div>
               </div>
@@ -68,8 +68,8 @@ const Testimonials = () => {
               </div>
 
               <div className="relative">
-                <Quote className="absolute -top-2 -left-2 w-8 h-8 text-blue-100" />
-                <p className="text-gray-700 leading-relaxed pl-6">
+                <Quote className="absolute -top-2 -left-2 w-8 h-8 text-gray-600" />
+                <p className="text-gray-300 leading-relaxed pl-6">
                   {testimonial.content}
                 </p>
               </div>
@@ -79,22 +79,22 @@ const Testimonials = () => {
 
         {/* Trust Indicators */}
         <div className="mt-20 text-center animate-fadeInUp">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-12">
-            <h3 className="heading-tertiary mb-6">
+          <div className="bg-gray-900 rounded-3xl p-12">
+            <h3 className="text-2xl font-semibold text-white mb-6">
               Trusted by Leading Companies
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
-              <div className="h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                <span className="font-semibold text-gray-600">Company 1</span>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-40">
+              <div className="h-12 bg-gray-700 rounded-lg flex items-center justify-center">
+                <span className="font-semibold text-gray-300">Company 1</span>
               </div>
-              <div className="h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                <span className="font-semibold text-gray-600">Company 2</span>
+              <div className="h-12 bg-gray-700 rounded-lg flex items-center justify-center">
+                <span className="font-semibold text-gray-300">Company 2</span>
               </div>
-              <div className="h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                <span className="font-semibold text-gray-600">Company 3</span>
+              <div className="h-12 bg-gray-700 rounded-lg flex items-center justify-center">
+                <span className="font-semibold text-gray-300">Company 3</span>
               </div>
-              <div className="h-12 bg-gray-300 rounded-lg flex items-center justify-center">
-                <span className="font-semibold text-gray-600">Company 4</span>
+              <div className="h-12 bg-gray-700 rounded-lg flex items-center justify-center">
+                <span className="font-semibold text-gray-300">Company 4</span>
               </div>
             </div>
           </div>

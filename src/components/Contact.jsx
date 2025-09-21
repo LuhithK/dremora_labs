@@ -57,16 +57,16 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-gradient-light">
+    <section id="contact" className="section-padding bg-black">
       <div className="container-custom">
         <div className="text-center mb-20 animate-fadeInUp">
           <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
             Get In Touch
           </div>
-          <h2 className="heading-secondary mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Let's Start Your Project
           </h2>
-          <p className="text-lead max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Ready to transform your business with cutting-edge technology? Get in touch with us today 
             and let's discuss how we can help you achieve your goals.
           </p>
@@ -75,7 +75,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-16 mb-20">
           {/* Contact Information */}
           <div className="animate-fadeInLeft">
-            <h3 className="heading-tertiary mb-8">Get In Touch</h3>
+            <h3 className="text-2xl font-semibold text-white mb-8">Get In Touch</h3>
             
             <div className="space-y-8 mb-12">
               {contactInfo.map((info, index) => (
@@ -84,26 +84,26 @@ const Contact = () => {
                     <info.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">{info.title}</h4>
+                    <h4 className="font-semibold text-white mb-2">{info.title}</h4>
                     <a
                       href={info.link}
                       className="text-blue-600 hover:text-blue-700 transition-colors font-medium block mb-1"
                     >
                       {info.content}
                     </a>
-                    <p className="text-gray-600 text-sm">{info.description}</p>
+                    <p className="text-gray-400 text-sm">{info.description}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="card-professional">
-              <h4 className="font-semibold text-gray-900 mb-6">Why Choose Dremora Labs?</h4>
+            <div className="bg-gray-900 rounded-xl p-8">
+              <h4 className="font-semibold text-white mb-6">Why Choose Dremora Labs?</h4>
               <div className="grid grid-cols-2 gap-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700 text-sm">{benefit}</span>
+                    <span className="text-gray-300 text-sm">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -112,13 +112,13 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="animate-fadeInRight">
-            <div className="card-professional">
-              <h3 className="heading-tertiary mb-8">Send us a message</h3>
+            <div className="bg-gray-900 rounded-xl p-8">
+              <h3 className="text-2xl font-semibold text-white mb-8">Send us a message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
                     <input
@@ -128,12 +128,12 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       placeholder="Your full name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
                     <input
@@ -143,7 +143,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -151,7 +151,7 @@ const Contact = () => {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                       Company
                     </label>
                     <input
@@ -160,12 +160,12 @@ const Contact = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       placeholder="Your company name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
                       Subject *
                     </label>
                     <input
@@ -175,14 +175,14 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       placeholder="Project subject"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
                   </label>
                   <textarea
@@ -192,7 +192,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-xl text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
                     placeholder="Tell us about your project..."
                   ></textarea>
                 </div>
@@ -211,11 +211,11 @@ const Contact = () => {
 
         {/* CTA Section */}
         <div className="text-center animate-fadeInUp">
-          <div className="cta-section text-white rounded-3xl p-16 relative">
-            <h3 className="text-4xl font-bold mb-6">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-3xl p-16 relative">
+            <h3 className="text-3xl font-bold mb-6">
               Ready to Get Started?
             </h3>
-            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
               Join the growing number of businesses that trust Dremora Labs 
               for their technology needs.
             </p>

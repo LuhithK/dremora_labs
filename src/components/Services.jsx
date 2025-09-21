@@ -48,17 +48,17 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="section-padding bg-white">
+    <section id="services" className="section-padding bg-black">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-20 animate-fadeInUp">
           <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
             Our Services
           </div>
-          <h2 className="heading-secondary mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Comprehensive IT Solutions
           </h2>
-          <p className="text-lead max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             We offer a full spectrum of technology services designed to help your business 
             thrive in the digital landscape. From custom development to strategic consulting.
           </p>
@@ -67,30 +67,30 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 animate-fadeInUp">
           {services.map((service, index) => (
-            <div key={index} className="service-card group">
+            <div key={index} className="bg-gray-900 rounded-xl p-8 text-center card-hover group">
               <div className={`icon-wrapper bg-gradient-to-r ${service.color} mb-6`}>
                 <service.icon className="w-8 h-8 text-white" />
               </div>
               
-              <h3 className="heading-tertiary mb-4 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">
                 {service.title}
               </h3>
               
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-400 mb-6 leading-relaxed">
                 {service.description}
               </p>
 
               {/* Features */}
               <div className="space-y-2 mb-8">
                 {service.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center text-sm text-gray-700">
+                  <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                     <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div>
                     {feature}
                   </div>
                 ))}
               </div>
               
-              <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors group flex items-center">
+              <button className="text-blue-400 font-semibold hover:text-blue-300 transition-colors group flex items-center">
                 Learn More
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -100,11 +100,11 @@ const Services = () => {
 
         {/* CTA Section */}
         <div className="text-center animate-fadeInUp">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-12">
-            <h3 className="heading-tertiary mb-4">
+          <div className="bg-gray-900 rounded-3xl p-12">
+            <h3 className="text-2xl font-semibold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p className="text-lead mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
               Let's discuss how our services can help you achieve your technology goals 
               and drive business growth.
             </p>
