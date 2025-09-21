@@ -125,7 +125,6 @@ const AboutPage = () => {
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <div className="text-6xl font-bold text-gray-800 mb-4">{service.number}</div>
                 
-                <button className="text-red-600 font-semibold hover:text-red-500 transition-colors text-sm tracking-wider uppercase">
                 <button className="text-blue-600 font-semibold hover:text-blue-500 transition-colors text-sm tracking-wider uppercase">
                   {service.description} →
                 </button>
