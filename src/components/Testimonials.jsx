@@ -6,48 +6,48 @@ const Testimonials = () => {
     {
       name: 'Sarah Johnson',
       position: 'CEO, TechStart Inc.',
+      company: 'TechStart Inc.',
       image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=300',
-      content: 'Dremora Labs delivered an exceptional web application that exceeded our expectations. Their team is professional, responsive, and truly understands business needs.',
+      content: 'Dremora Labs delivered an exceptional web application that exceeded our expectations. Their team is professional, responsive, and truly understands business needs. The project was completed on time and within budget.',
       rating: 5
     },
     {
       name: 'Michael Chen',
       position: 'CTO, InnovateCorp',
+      company: 'InnovateCorp',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300',
-      content: 'The mobile app they developed for us has been a game-changer. The user experience is fantastic, and the performance is outstanding. Highly recommended!',
+      content: 'The mobile app they developed for us has been a game-changer. The user experience is fantastic, and the performance is outstanding. Our customer engagement has increased by 300% since launch.',
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
       position: 'Founder, HealthTech Solutions',
+      company: 'HealthTech Solutions',
       image: 'https://images.pexels.com/photos/3777931/pexels-photo-3777931.jpeg?auto=compress&cs=tinysrgb&w=300',
-      content: 'Working with Dremora Labs was a pleasure. They provided excellent cloud solutions that improved our scalability and reduced our operational costs significantly.',
+      content: 'Working with Dremora Labs was a pleasure. They provided excellent cloud solutions that improved our scalability and reduced our operational costs significantly. Highly recommended for any tech project.',
       rating: 5
     }
   ];
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-white">
       <div className="container-custom">
-        <div className="text-center mb-16 animate-fadeInUp">
+        <div className="text-center mb-20 animate-fadeInUp">
           <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
             Client Testimonials
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="heading-secondary mb-6">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied clients have to say about our services.
+          <p className="text-lead max-w-3xl mx-auto">
+            Don't just take our word for it. Here's what our satisfied clients have to say 
+            about our services and the results we've delivered.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 animate-fadeInUp">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-xl p-8 shadow-lg card-hover relative">
-              <div className="absolute top-6 right-6 text-blue-100">
-                <Quote className="w-8 h-8" />
-              </div>
-              
+            <div key={index} className="testimonial-card">
               <div className="flex items-center mb-6">
                 <img
                   src={testimonial.image}
@@ -57,6 +57,7 @@ const Testimonials = () => {
                 <div>
                   <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                   <p className="text-gray-600 text-sm">{testimonial.position}</p>
+                  <p className="text-blue-600 text-sm font-medium">{testimonial.company}</p>
                 </div>
               </div>
 
@@ -66,9 +67,37 @@ const Testimonials = () => {
                 ))}
               </div>
 
-              <p className="text-gray-700 leading-relaxed">"{testimonial.content}"</p>
+              <div className="relative">
+                <Quote className="absolute -top-2 -left-2 w-8 h-8 text-blue-100" />
+                <p className="text-gray-700 leading-relaxed pl-6">
+                  {testimonial.content}
+                </p>
+              </div>
             </div>
           ))}
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="mt-20 text-center animate-fadeInUp">
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-12">
+            <h3 className="heading-tertiary mb-6">
+              Trusted by Leading Companies
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
+              <div className="h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                <span className="font-semibold text-gray-600">Company 1</span>
+              </div>
+              <div className="h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                <span className="font-semibold text-gray-600">Company 2</span>
+              </div>
+              <div className="h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                <span className="font-semibold text-gray-600">Company 3</span>
+              </div>
+              <div className="h-12 bg-gray-300 rounded-lg flex items-center justify-center">
+                <span className="font-semibold text-gray-600">Company 4</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

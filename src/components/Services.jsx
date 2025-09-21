@@ -1,54 +1,123 @@
 import React from 'react';
-import { Shield, Clock, Users } from 'lucide-react';
+import { Shield, Zap, Users, ArrowRight, Code, Cloud, Smartphone } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       icon: Shield,
-      title: 'Enterprise-Grade Solutions',
-      description: 'Comprehensive enterprise solutions designed to meet the complex needs of large organizations with robust security and scalability. Our enterprise-grade solutions ensure your business operates at peak efficiency.',
-      link: 'READ MORE'
+      title: 'Enterprise Solutions',
+      description: 'Comprehensive enterprise-grade solutions designed to meet the complex needs of large organizations with robust security, scalability, and performance.',
+      features: ['Custom Development', 'System Integration', 'Security Audits'],
+      color: 'from-blue-500 to-blue-600'
     },
     {
-      icon: Clock,
-      title: 'Advanced Technical Solutions',
-      description: 'Cutting-edge technical solutions leveraging the latest technologies to streamline your business processes and enhance productivity. We deliver innovative solutions that drive digital transformation.',
-      link: 'READ MORE'
+      icon: Cloud,
+      title: 'Cloud Services',
+      description: 'Modern cloud infrastructure and migration services that enable businesses to scale efficiently while reducing operational costs and complexity.',
+      features: ['Cloud Migration', 'DevOps', 'Infrastructure'],
+      color: 'from-indigo-500 to-indigo-600'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Development',
+      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences across iOS and Android platforms.',
+      features: ['iOS Development', 'Android Apps', 'Cross-Platform'],
+      color: 'from-purple-500 to-purple-600'
+    },
+    {
+      icon: Code,
+      title: 'Web Development',
+      description: 'Modern web applications built with cutting-edge technologies, responsive design, and optimized for performance and user experience.',
+      features: ['React/Vue.js', 'Node.js', 'Progressive Web Apps'],
+      color: 'from-cyan-500 to-cyan-600'
+    },
+    {
+      icon: Zap,
+      title: 'Digital Transformation',
+      description: 'Strategic digital transformation services that help businesses modernize their operations and embrace new technologies.',
+      features: ['Process Automation', 'Digital Strategy', 'Change Management'],
+      color: 'from-green-500 to-green-600'
     },
     {
       icon: Users,
-      title: 'Outsourcing IT and Augmentation',
-      description: 'Professional IT outsourcing services and team augmentation to help you scale your development capabilities efficiently. Access top-tier talent and expertise to accelerate your projects.',
-      link: 'READ MORE'
+      title: 'IT Consulting',
+      description: 'Expert IT consulting services providing strategic guidance, technical expertise, and best practices for your technology initiatives.',
+      features: ['Technical Strategy', 'Architecture Review', 'Team Augmentation'],
+      color: 'from-orange-500 to-orange-600'
     }
   ];
 
   return (
-    <section id="services" className="section-padding bg-black">
+    <section id="services" className="section-padding bg-white">
       <div className="container-custom">
-        <div className="text-center mb-16 animate-fadeInUp">
-          <h2 className="text-5xl font-bold text-white mb-6">
-            Key Services
+        {/* Section Header */}
+        <div className="text-center mb-20 animate-fadeInUp">
+          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            Our Services
+          </div>
+          <h2 className="heading-secondary mb-6">
+            Comprehensive IT Solutions
           </h2>
-          <div className="w-24 h-1 bg-red-600 mx-auto"></div>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <p className="text-lead max-w-3xl mx-auto">
+            We offer a full spectrum of technology services designed to help your business 
+            thrive in the digital landscape. From custom development to strategic consulting.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 animate-fadeInUp">
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 animate-fadeInUp">
           {services.map((service, index) => (
-            <div key={index} className="service-card text-center">
-              <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <service.icon className="w-10 h-10 text-white" />
+            <div key={index} className="service-card group">
+              <div className={`icon-wrapper bg-gradient-to-r ${service.color} mb-6`}>
+                <service.icon className="w-8 h-8 text-white" />
               </div>
               
-              <h3 className="text-2xl font-semibold text-white mb-6">{service.title}</h3>
-              <p className="text-gray-400 mb-8 leading-relaxed text-base">{service.description}</p>
+              <h3 className="heading-tertiary mb-4 group-hover:text-blue-600 transition-colors">
+                {service.title}
+              </h3>
               
-              <button className="text-red-600 font-semibold hover:text-red-500 transition-colors text-sm tracking-wider uppercase">
-                {service.link} →
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                {service.description}
+              </p>
+
+              {/* Features */}
+              <div className="space-y-2 mb-8">
+                {service.features.map((feature, featureIndex) => (
+                  <div key={featureIndex} className="flex items-center text-sm text-gray-700">
+                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-3"></div>
+                    {feature}
+                  </div>
+                ))}
+              </div>
+              
+              <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors group flex items-center">
+                Learn More
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center animate-fadeInUp">
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-12">
+            <h3 className="heading-tertiary mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-lead mb-8 max-w-2xl mx-auto">
+              Let's discuss how our services can help you achieve your technology goals 
+              and drive business growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="btn-primary">
+                Start Your Project
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+              <button className="btn-secondary">
+                Schedule Consultation
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

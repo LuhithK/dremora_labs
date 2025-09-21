@@ -4,18 +4,17 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navItems = [
-    { name: 'Services', href: '#services' },
+    { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Industries', href: '/industries' },
     { name: 'Portfolio', href: '/portfolio' },
@@ -26,20 +25,27 @@ const Header = () => {
 
   return (
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/95 backdrop-blur-sm' : 'bg-black/90 backdrop-blur-sm'
+      isScrolled 
+        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100' 
+        : 'bg-white/90 backdrop-blur-sm'
     }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded mr-3 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">D</span>
+            <a href="/" className="flex items-center group">
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl mr-3 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+                  <span className="text-white font-bold text-lg">D</span>
+                </div>
+                <div className="absolute inset-0 w-10 h-10 bg-gradient-to-r from-blue-400 to-blue-500 rounded-xl mr-3 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </div>
-              <div className="text-2xl font-bold text-white">
-                <span className="text-blue-500">Dremora Labs</span>
+              <div className="text-2xl font-bold">
+                <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                  Dremora Labs
+                </span>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -48,22 +54,21 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-blue-500 transition-colors duration-300 font-medium text-sm"
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium text-sm relative group"
               >
                 {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
             
-            {/* Dark Mode Toggle */}
-            <div 
-              className={`dark-mode-toggle ${isDarkMode ? 'active' : ''}`}
-              onClick={() => setIsDarkMode(!isDarkMode)}
-            ></div>
+            <button className="btn-primary ml-4">
+              Get Started
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg text-gray-300"
+            className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -72,17 +77,22 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-black/95 backdrop-blur-sm rounded-lg mt-2 py-4">
+          <div className="lg:hidden bg-white border-t border-gray-100 py-4">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-3 px-4 text-gray-300 hover:bg-gray-800 hover:text-blue-500 transition-colors duration-300"
+                className="block py-3 px-4 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-300 rounded-lg mx-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </a>
             ))}
+            <div className="px-6 pt-4">
+              <button className="btn-primary w-full">
+                Get Started
+              </button>
+            </div>
           </div>
         )}
       </div>
