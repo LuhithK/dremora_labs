@@ -9,6 +9,7 @@ import Partners from './components/Partners';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
 import ServicesPage from './components/ServicesPage';
+import SolutionsPage from './components/SolutionsPage';
 
 // Home Page Component
 const HomePage = () => (
@@ -31,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/solutions" element={<SolutionsPage />} />
         </Routes>
       </div>
     </Router>
