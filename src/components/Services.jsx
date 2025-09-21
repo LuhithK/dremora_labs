@@ -38,7 +38,6 @@ const Services = () => {
           {services.map((service, index) => (
             <div key={index} className="service-card text-center">
               <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <service.icon className="w-10 h-10 text-white" />
               </div>
               
@@ -46,16 +45,12 @@ const Services = () => {
               <p className="text-gray-400 mb-8 leading-relaxed text-base">{service.description}</p>
               
               <button className="text-red-600 font-semibold hover:text-red-500 transition-colors text-sm tracking-wider uppercase">
-              <button className="text-blue-500 font-semibold hover:text-blue-400 transition-colors text-sm tracking-wider uppercase">
                 {service.link} →
               </button>
             </div>
           ))}
         </div>
       </div>
-    )
-    )
-    }
     </section>
   );
 };
