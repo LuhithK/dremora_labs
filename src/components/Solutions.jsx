@@ -36,6 +36,7 @@ const Solutions = () => {
             Solutions
           </h2>
           <div className="w-24 h-1 bg-red-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 animate-fadeInUp">

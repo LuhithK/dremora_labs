@@ -30,6 +30,7 @@ const Products = () => {
             Key Products
           </h2>
           <div className="w-24 h-1 bg-red-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12 animate-fadeInUp">

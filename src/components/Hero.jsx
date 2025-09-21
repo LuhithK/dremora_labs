@@ -33,6 +33,7 @@ const Hero = () => {
             </p>
             
             <div className="w-24 h-1 bg-red-600 mx-auto"></div>
+            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
           </div>
 
           {/* Stats Row */}
@@ -40,11 +41,11 @@ const Hero = () => {
             {stats.map((stat, index) => (
               <div key={index} className="stats-counter p-6 text-center">
                 <div className="flex items-center justify-center mb-4">
-                  <div className="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center mr-3">
+                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
                     <span className="text-white text-2xl">{stat.icon}</span>
                   </div>
                   <div className="text-left">
-                    <div className="text-red-600 text-3xl font-bold">{stat.number}</div>
+                    <div className="text-blue-500 text-3xl font-bold">{stat.number}</div>
                   </div>
                 </div>
                 <p className="text-gray-300 text-sm leading-tight">{stat.label}</p>

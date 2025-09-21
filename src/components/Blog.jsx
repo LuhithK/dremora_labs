@@ -42,6 +42,7 @@ const Blog = () => {
             Latest Blog
           </h2>
           <div className="w-24 h-1 bg-red-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 animate-fadeInUp">
@@ -49,16 +50,16 @@ const Blog = () => {
             <div key={index} className="blog-card">
               <div className="p-8">
                 <div className="flex items-center justify-between mb-6">
-                  <div className="text-red-600 font-semibold text-sm">
+                  <div className="text-blue-500 font-semibold text-sm">
                     {post.date} {post.year}
                   </div>
-                  <div className="text-4xl font-bold text-red-600">
+                  <div className="text-4xl font-bold text-blue-500">
                     {post.day}
                   </div>
                 </div>
                 
                 <div className="mb-6">
-                  <div className="text-red-600 font-semibold text-sm mb-3 uppercase tracking-wider">
+                  <div className="text-blue-500 font-semibold text-sm mb-3 uppercase tracking-wider">
                     {post.title}
                   </div>
                   <h3 className="text-2xl font-semibold text-white mb-4 leading-tight">
@@ -70,10 +71,10 @@ const Blog = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-red-600 font-semibold text-sm">
+                  <span className="text-blue-500 font-semibold text-sm">
                     {post.author}
                   </span>
-                  <button className="text-red-600 font-semibold hover:text-red-500 transition-colors text-sm uppercase tracking-wider">
+                  <button className="text-blue-500 font-semibold hover:text-blue-400 transition-colors text-sm uppercase tracking-wider">
                     {post.readMore} →
                   </button>
                 </div>

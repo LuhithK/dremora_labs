@@ -32,8 +32,15 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-white">
-              <span className="text-red-600">INOVA</span>
+            <div className="flex items-center">
+              <img 
+                src="/assets/logo copy.png" 
+                alt="Dremora Labs" 
+                className="h-8 w-auto mr-3"
+              />
+              <div className="text-2xl font-bold text-white">
+                <span className="text-blue-500">Dremora Labs</span>
+              </div>
             </div>
           </div>
 
@@ -43,7 +50,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-red-600 transition-colors duration-300 font-medium text-sm"
+                className="text-gray-300 hover:text-blue-500 transition-colors duration-300 font-medium text-sm"
               >
                 {item.name}
               </a>
@@ -72,7 +79,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block py-3 px-4 text-gray-300 hover:bg-gray-800 hover:text-red-600 transition-colors duration-300"
+                className="block py-3 px-4 text-gray-300 hover:bg-gray-800 hover:text-blue-500 transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

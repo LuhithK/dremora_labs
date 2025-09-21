@@ -32,20 +32,27 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="text-3xl font-bold mb-8 text-white">
-              <span className="text-red-600">INOVA</span>
+            <div className="flex items-center mb-8">
+              <img 
+                src="/assets/logo copy.png" 
+                alt="Dremora Labs" 
+                className="h-8 w-auto mr-3"
+              />
+              <div className="text-3xl font-bold text-white">
+                <span className="text-blue-500">Dremora Labs</span>
+              </div>
             </div>
             <div className="space-y-4 text-gray-400">
               <div className="flex items-start">
-                <Phone className="w-5 h-5 mr-3 mt-1 text-red-600" />
+                <Phone className="w-5 h-5 mr-3 mt-1 text-blue-500" />
                 <span>+94 11 2 691 691</span>
               </div>
               <div className="flex items-start">
-                <Mail className="w-5 h-5 mr-3 mt-1 text-red-600" />
+                <Mail className="w-5 h-5 mr-3 mt-1 text-blue-500" />
                 <span>info@inovaitsys.com</span>
               </div>
               <div className="flex items-start">
-                <MapPin className="w-5 h-5 mr-3 mt-1 text-red-600" />
+                <MapPin className="w-5 h-5 mr-3 mt-1 text-blue-500" />
                 <span>No 5, Sulaiman Terrace, Colombo 05, Sri Lanka</span>
               </div>
             </div>
@@ -57,7 +64,7 @@ const Footer = () => {
             <ul className="space-y-4">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-gray-400 hover:text-red-600 transition-colors text-base">
+                  <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-base">
                     {link}
                   </a>
                 </li>
@@ -71,7 +78,7 @@ const Footer = () => {
             <ul className="space-y-4">
               {serviceLinks.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-gray-400 hover:text-red-600 transition-colors text-base">
+                  <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors text-base">
                     {link}
                   </a>
                 </li>
@@ -84,14 +91,14 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-8 text-white">Recent Blog</h4>
             <div className="space-y-6 mb-10">
               {recentBlog.map((blog, index) => (
-                <div key={index} className="border-l-2 border-red-600 pl-4">
+                <div key={index} className="border-l-2 border-blue-500 pl-4">
                   <h5 className="text-white font-medium mb-2 text-base">{blog.title}</h5>
                   <p className="text-gray-400 text-sm">{blog.date}</p>
                 </div>
               ))}
             </div>
             
-            <div className="bg-red-600 text-white p-6 rounded-lg">
+            <div className="bg-blue-600 text-white p-6 rounded-lg">
               <h4 className="font-semibold mb-3 text-lg">Contact Us</h4>
               <p className="text-sm leading-relaxed">Ready to start your project? Get in touch with us today!</p>
             </div>
@@ -108,8 +115,8 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center space-x-8">
-              <a href="#" className="hover:text-red-600 transition-colors text-base">Privacy Policy</a>
-              <a href="#" className="hover:text-red-600 transition-colors text-base">Terms Of Conditions</a>
+              <a href="#" className="hover:text-blue-500 transition-colors text-base">Privacy Policy</a>
+              <a href="#" className="hover:text-blue-500 transition-colors text-base">Terms Of Conditions</a>
             </div>
           </div>
         </div>
@@ -118,7 +125,7 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-14 h-14 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition-all duration-300 transform hover:scale-110 shadow-lg z-50"
+        className="fixed bottom-8 right-8 w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-all duration-300 transform hover:scale-110 shadow-lg z-50"
         aria-label="Scroll to top"
       >
         <ArrowUp className="w-6 h-6" />
