@@ -165,7 +165,6 @@ const CareersPage = () => {
                       {position.status}
                     </span>
                   </div>
-                  <button className="text-red-600 font-semibold hover:text-red-700 transition-colors">
                   <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
                     {position.link}
                   </button>
